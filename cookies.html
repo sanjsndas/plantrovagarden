@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy | Plantrova Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+        
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1E5631;
+            --accent: #86C232;
+            --light: #F8F9FA;
+            --dark: #222629;
+            --gray: #6B6E70;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-dark);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.7)), 
+                        url('s4.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+        }
+        
+        .btn {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(46, 139, 87, 0.2);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(46, 139, 87, 0.2);
+        }
+        
+        .footer {
+            background-color: var(--primary-dark);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .cookie-point {
+            margin-bottom: 2rem;
+        }
+        
+        .cookie-point h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 1.5rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            display: none;
+        }
+        
+        .cookie-consent.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span class="text-xl font-bold text-gray-800">Plantrova</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+                <a href="privacy.html" class="nav-link text-gray-700 hover:text-gray-900">Privacy</a>
+                <a href="terms.html" class="nav-link text-gray-700 hover:text-gray-900">Terms</a>
+                <a href="cookies.html" class="nav-link active text-gray-900 font-medium">Cookies</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
+                <a href="#quote" class="btn btn-primary px-6 py-2 rounded-full">Get Quote</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Cookies Policy</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">Last Updated: January 15, 2023</p>
+        </div>
+    </section>
+
+    <!-- Cookies Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-8 text-gray-600">This Cookies Policy explains what cookies are and how we use them on our website. You should read this policy to understand what types of cookies we use, the information we collect using cookies, and how that information is used.</p>
+
+                <div class="cookie-point">
+                    <h3>1. What Are Cookies</h3>
+                    <p class="text-gray-600">Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies cannot be used to run programs or deliver viruses to your computer.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>2. How We Use Cookies</h3>
+                    <p class="text-gray-600">We use cookies primarily to enhance your experience on our website. They help us recognize your device and remember your preferences when you return to our site. Some cookies are essential for the functioning of the website, while others help us analyze visitor behavior and improve our services.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>3. Types of Cookies We Use</h3>
+                    <p class="text-gray-600">Our website uses several types of cookies including strictly necessary cookies, performance cookies, functionality cookies, and targeting cookies. Each type serves a different purpose and collects different types of information about your browsing behavior.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>4. Strictly Necessary Cookies</h3>
+                    <p class="text-gray-600">These cookies are essential for you to browse our website and use its features. Without these cookies, services like shopping baskets and secure logins would not work properly. They ensure the website functions as designed and must be enabled for you to use our services effectively.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>5. Performance Cookies</h3>
+                    <p class="text-gray-600">These cookies collect information about how visitors use our website, including which pages are visited most often and any error messages visitors receive. They help us improve how the website works by measuring how visitors interact with our content.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>6. Functionality Cookies</h3>
+                    <p class="text-gray-600">These cookies allow our website to remember choices you make (such as your username, language preference, or region) and provide enhanced, more personal features. These can also be used to remember changes you've made to text size, fonts, and other customizable web page elements.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>7. Targeting Cookies</h3>
+                    <p class="text-gray-600">These cookies track your visits to our website, the pages you visit, and the links you follow. We may share this information with third parties (such as advertisers) to help deliver more relevant advertising to you when you visit other websites.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>8. First-Party Cookies</h3>
+                    <p class="text-gray-600">These are cookies placed directly by our website that we are visiting. Only we have access to the information collected by these cookies which are typically used for functionality purposes like remembering your login details or preferences.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>9. Third-Party Cookies</h3>
+                    <p class="text-gray-600">These cookies are placed by domains other than our own when we include elements from other sites on our pages (like advertisements). They are often used for tracking and online advertising purposes.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>10. Session Cookies</h3>
+                    <p class="text-gray-600">These cookies are temporary and only remain in your browser until you leave our website. They are typically used to maintain your session as you navigate through different pages on our site.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>11. Persistent Cookies</h3>
+                    <p class="text-gray-600">These cookies remain on your device for the period specified in the cookie or until you manually delete them. They are used to remember your preferences and actions beyond the current session.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>12. Analytics Cookies</h3>
+                    <p class="text-gray-600">We use analytics cookies to understand how visitors interact with our website. These cookies help provide information about metrics such as number of visitors, bounce rate, traffic sources, and other key performance indicators.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>13. Advertising Cookies</h3>
+                    <p class="text-gray-600">These cookies enable us to serve you with advertisements that may be relevant to your interests based on your browsing history. They are used to display targeted advertising to you across different websites.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>14. Cookie Duration</h3>
+                    <p class="text-gray-600">Different cookies have different lifespans. Some cookies expire when you close your browser (session cookies), while others may remain on your device for months or even years (persistent cookies), unless you delete them manually.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>15. Consent for Cookies</h3>
+                    <p class="text-gray-600">When you first visit our website, we ask for your consent to use cookies through our cookie banner. You can choose to accept all cookies, reject all cookies, or customize your cookie preferences.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>16. Managing Cookies</h3>
+                    <p class="text-gray-600">You can control and/or delete cookies as you wish through your browser settings. You can delete all cookies that are already on your device and set most browsers to prevent them from being placed.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>17. Browser Controls</h3>
+                    <p class="text-gray-600">Most web browsers allow some control of cookies through browser settings. You can adjust your browser settings to refuse cookies or alert you when cookies are being sent. However, if you disable cookies, some features of our website may not function properly.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>18. Do Not Track Signals</h3>
+                    <p class="text-gray-600">Some browsers offer a "Do Not Track" feature that signals to websites you visit that you do not want to have your online activity tracked. Our website does not currently respond to Do Not Track signals.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>19. GDPR Compliance</h3>
+                    <p class="text-gray-600">For visitors from the European Union, our use of cookies complies with the General Data Protection Regulation (GDPR). We ensure that we have a legal basis for processing personal data collected through cookies when required.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>20. CCPA Compliance</h3>
+                    <p class="text-gray-600">For visitors from California, our cookie practices comply with the California Consumer Privacy Act (CCPA). California residents have the right to opt-out of the sale of their personal information, including certain uses of cookies.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>21. Cookie Declaration</h3>
+                    <p class="text-gray-600">We maintain a detailed cookie declaration that lists all the cookies used on our website, their purposes, durations, and whether they are first-party or third-party cookies. This declaration is available through our cookie preference center.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>22. Changes to Cookie Policy</h3>
+                    <p class="text-gray-600">We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Any changes will be posted on this page with an updated revision date.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>23. Essential Website Functions</h3>
+                    <p class="text-gray-600">Certain cookies are necessary for core website functions such as maintaining your logged-in status, keeping items in your shopping cart, and ensuring security. These cookies don't require your consent but are automatically stored when you visit our site.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>24. Personalized Content</h3>
+                    <p class="text-gray-600">Cookies help us deliver personalized content based on your browsing behavior and preferences. This includes showing you relevant products or services and remembering your language or region settings.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>25. Social Media Cookies</h3>
+                    <p class="text-gray-600">We use social media plugins that may set cookies when you interact with our content through platforms like Facebook, Twitter, or Instagram. These cookies allow social media platforms to track your browsing habits across websites.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>26. Performance Optimization</h3>
+                    <p class="text-gray-600">Performance cookies help us understand how visitors interact with different pages on our site so we can optimize the user experience. They provide insights into which pages load slowly or receive errors.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>27. Preference Management</h3>
+                    <p class="text-gray-600">You can manage your cookie preferences through our cookie settings panel. This allows you to enable or disable different categories of cookies according to your preferences while still accessing most website functionality.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>28. Flash Cookies</h3>
+                    <p class="text-gray-600">Our website does not currently use Flash cookies (also called Local Shared Objects). These are different from browser cookies and require different management techniques in your browser settings or Flash player settings.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>29. Mobile Cookies</h3>
+                    <p class="text-gray-600">When accessing our website from mobile devices, similar tracking technologies may be used to collect information about your mobile browsing behavior. Mobile cookies function similarly to standard cookies but are optimized for mobile devices.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>30. Cookie Consent Management</h3>
+                    <p class="text-gray-600">You can manage your cookie consent preferences at any time by revisiting our cookie consent banner. This allows you to change your choices regarding the use of cookies on our site.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>31. Cookie Policy Contact Information</h3>
+                    <p class="text-gray-600">If you have any questions about our cookie policy or practices, please contact us at support@plantrova.com. We are here to assist you with any inquiries you may have regarding our use of cookies.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>32. Cookie Policy Updates</h3>
+                    <p class="text-gray-600">We encourage you to review our cookie policy periodically for any updates. Changes will be reflected on this page, and your continued use of our website signifies your acceptance of the updated policy.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>33. Cookie Preferences for New Users</h3>
+                    <p class="text-gray-600">New users visiting our website will see the cookie consent banner upon their first visit. This ensures that they are informed about our cookie practices and can make an informed choice.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>34. Cookie Policy for Children</h3>
+                    <p class="text-gray-600">Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children, and if we become aware of such data, we will take steps to delete it.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>35. Cookie Policy for Third-Party Services</h3>
+                    <p class="text-gray-600">We may use third-party services that set cookies on our behalf. These services help us analyze website traffic, deliver advertisements, and provide other functionalities. We do not control these cookies and recommend reviewing their privacy policies.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>36. Cookie Policy for Analytics Tools</h3>
+                    <p class="text-gray-600">We utilize analytics tools that may set cookies to collect data about user interactions on our site. This information helps us improve our website and user experience by understanding how visitors engage with our content.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>37. Cookie Policy for Advertising Partners</h3>
+                    <p class="text-gray-600">Our advertising partners may use cookies to deliver targeted ads based on your interests. These cookies track your browsing behavior across different websites to provide more relevant advertising.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>38. Cookie Policy for Affiliate Programs</h3>
+                    <p class="text-gray-600">If you access our website through an affiliate link, cookies may be set to track referrals and commissions. These cookies help us manage our affiliate relationships and ensure proper compensation.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>39. Cookie Policy for User Experience</h3>
+                    <p class="text-gray-600">Cookies enhance user experience by remembering your preferences and settings. This allows for a more personalized browsing experience, making it easier for you to navigate our website.</p>
+                </div>
+
+                <div class="cookie-point">
+                    <h3>40. Final Thoughts on Cookies</h3>
+                    <p class="text-gray-600">Understanding our cookie policy is essential for a seamless experience on our website. We appreciate your attention to this matter and encourage you to reach out with any questions or concerns regarding our use of cookies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Dialog -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p class="text-gray-600">We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of cookies. You can manage your preferences at any time.</p>
+        <div class="flex justify-center space-x-4">
+            <button id="acceptCookies" class="btn btn-primary">Accept</button>
+            <button id="declineCookies" class="btn btn-outline">Decline</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-6 bg-primary-dark text-white">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Plantrova Garden. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            if (!localStorage.getItem('cookiesAccepted')) {
+                cookieConsent.classList.add('show');
+            }
+
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieConsent.classList.remove('show');
+            });
+
+            declineCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieConsent.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Plantrova Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+        
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1E5631;
+            --accent: #86C232;
+            --light: #F8F9FA;
+            --dark: #222629;
+            --gray: #6B6E70;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-dark);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.7)), 
+                        url('s4.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+        }
+        
+        .btn {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(46, 139, 87, 0.2);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(46, 139, 87, 0.2);
+        }
+        
+        .footer {
+            background-color: var(--primary-dark);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .contact-point {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-point h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input {
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 0.75rem;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span class="text-xl font-bold text-gray-800">Plantrova</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+                <a href="privacy.html" class="nav-link text-gray-700 hover:text-gray-900">Privacy</a>
+                <a href="terms.html" class="nav-link text-gray-700 hover:text-gray-900">Terms</a>
+                <a href="cookies.html" class="nav-link text-gray-700 hover:text-gray-900">Cookies</a>
+                <a href="contact.html" class="nav-link active text-gray-900 font-medium">Contact</a>
+                <a href="#quote" class="btn btn-primary px-6 py-2 rounded-full">Get Quote</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Contact Us</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">We'd love to hear from you! Reach out with any questions or inquiries.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto contact-form p-8">
+                <h2 class="text-2xl font-bold mb-6 text-center">Send Us a Message</h2>
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required class="form-input">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" required class="form-input">
+                    </div>
+                    <div>
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    <div>
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" name="subject" required class="form-input">
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="services">Services Information</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="consent" name="consent" required class="mr-2">
+                        <label for="consent" class="text-sm text-gray-600">I agree to the <a href="privacy.html" class="text-green-600 hover: underline">Privacy Policy</a>.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary px-6 py-2 rounded-full w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-8 text-gray-600">At Plantrova Garden, we value your feedback and inquiries. Our team is dedicated to providing you with the best service possible. Below are some points of contact and information that may assist you in reaching out to us effectively.</p>
+
+                <div class="contact-point">
+                    <h3>1. Customer Support</h3>
+                    <p class="text-gray-600">Our customer support team is available to assist you with any questions or concerns you may have. You can reach us via email or phone, and we strive to respond within 24 hours.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>2. Office Hours</h3>
+                    <p class="text-gray-600">Our office hours are Monday to Friday, from 9 AM to 5 PM EST. We are closed on weekends and public holidays. Feel free to reach out during these hours for immediate assistance.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>3. Location</h3>
+                    <p class="text-gray-600">You can visit us at our office located at Metrotech Center, Brooklyn, NY 11201, USA. We welcome walk-in inquiries and are happy to assist you in person.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>4. Email Communication</h3>
+                    <p class="text-gray-600">For any inquiries, please email us at support@plantrova.com. We recommend including your contact information and a brief description of your inquiry to expedite the response process.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>5. Phone Support</h3>
+                    <p class="text-gray-600">You can reach our support team at (123) 456-7890. Our representatives are trained to assist you with any issues or questions you may have regarding our services.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>6. Feedback and Suggestions</h3>
+                    <p class="text-gray-600">We appreciate your feedback! If you have suggestions on how we can improve our services, please let us know through our contact form or via email. Your input is invaluable to us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>7. Requesting a Quote</h3>
+                    <p class="text-gray-600">If you are interested in our services and would like to receive a quote, please fill out the contact form with your details, and we will get back to you with a personalized quote.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>8. Social Media</h3>
+                    <p class="text-gray-600">Stay connected with us on social media! Follow us on Facebook, Instagram, and Twitter for updates, promotions, and gardening tips. We love engaging with our community online.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>9. FAQs</h3>
+                    <p class="text-gray-600">Before reaching out, you may want to check our FAQ section on the website. Many common questions are answered there, which may save you time.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>10. Privacy Concerns</h3>
+                    <p class="text-gray-600">We take your privacy seriously. If you have any concerns regarding how we handle your personal information, please refer to our Privacy Policy or contact us directly.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>11. Service Availability</h3>
+                    <p class="text-gray-600">Our services are available in various locations. Please inquire about service availability in your area when contacting us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>12. Partnership Opportunities</h3>
+                    <p class="text-gray-600">If you are interested in partnering with Plantrova Garden, please reach out to us via email. We are open to collaborations that align with our mission and values.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>13. Community Events</h3>
+                    <p class="text-gray-600">We host various community events throughout the year. Stay tuned for announcements on our website and social media for upcoming events and how you can participate.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>14. Gardening Tips</h3>
+                    <p class="text-gray-600">Our team is passionate about gardening! If you have specific gardening questions or need advice, feel free to ask us when you contact us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>15. Customer Testimonials</h3>
+                    <p class="text-gray-600">We love hearing from our customers! If you have a testimonial or success story to share, please let us know. Your experiences help us grow and improve.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>16. Service Customization</h3>
+                    <p class="text-gray-600">We understand that every customer has unique needs. If you require customized services, please discuss your requirements with us, and we will do our best to accommodate you.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>17. Payment Options</h3>
+                    <p class="text-gray-600">We offer various payment options for our services. If you have questions about payment methods, please inquire when you contact us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>18. Service Guarantees</h3>
+                    <p class="text-gray-600">We stand behind our services. If you are not satisfied with our work, please let us know, and we will work to resolve the issue to your satisfaction.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>19. Environmental Commitment</h3>
+                    <p class="text-gray-600">At Plantrova Garden, we are committed to sustainable practices. If you have questions about our environmental policies, feel free to reach out.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>20. Seasonal Promotions</h3>
+                    <p class="text-gray-600">We offer seasonal promotions and discounts. To stay informed about our latest offers, subscribe to our newsletter or follow us on social media.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>21. Gardening Workshops</h3>
+                    <p class="text-gray-600">We conduct gardening workshops for enthusiasts of all levels. If you are interested in attending, please contact us for more information.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>22. Product Recommendations</h3>
+                    <p class="text-gray-600">If you need recommendations for gardening products, our team is here to help. Just ask us when you reach out!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>23. Service Feedback</h3>
+                    <p class="text-gray-600">Your feedback is crucial for our improvement. After using our services, please let us know your thoughts and suggestions.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>24. Emergency Services</h3>
+                    <p class="text-gray-600">In case of urgent gardening needs, please contact us directly. We will do our best to assist you as quickly as possible.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>25. Community Involvement</h3>
+                    <p class="text-gray-600">We believe in giving back to the community. If you know of any local initiatives we can support, please let us know.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>26. Gardening Resources</h3>
+                    <p class="text-gray-600">We provide various resources for gardening enthusiasts. If you are looking for specific information, feel free to ask.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>27. Service Areas</h3>
+                    <p class="text-gray-600">Our services are available in multiple regions. Please inquire about our service areas when you contact us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>28. Gardening Community</h3>
+                    <p class="text-gray-600">Join our gardening community! We encourage sharing tips, experiences, and advice among fellow gardening enthusiasts.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>29. Online Consultations</h3>
+                    <p class="text-gray-600">We offer online consultations for those who prefer virtual assistance. Contact us to schedule your session.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>30. Service Updates</h3>
+                    <p class="text-gray-600">Stay updated on our services and offerings by subscribing to our newsletter. We send out regular updates and promotions.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>31. Gardening Challenges</h3>
+                    <p class="text-gray-600">If you are facing specific gardening challenges, let us know. Our experts are here to provide solutions and advice.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>32. Plant Care Tips</h3>
+                    <p class="text-gray-600">We love sharing plant care tips! If you have questions about specific plants, reach out for personalized advice.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>33. Seasonal Gardening</h3>
+                    <p class="text-gray-600">Gardening varies by season. If you need guidance on seasonal gardening practices, we are here to help.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>34. Gardening Equipment</h3>
+                    <p class="text-gray-600">If you need recommendations for gardening equipment, please ask us. We can guide you on the best tools for your needs.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>35. Local Gardening Events</h3>
+                    <p class="text-gray-600">We participate in local gardening events. If you want to know more about our involvement, feel free to reach out.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>36. Gardening Blogs</h3>
+                    <p class="text-gray-600">Check out our gardening blog for tips, tricks, and inspiration. If you have topics you want us to cover, let us know!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>37. Gardening Clubs</h3>
+                    <p class="text-gray-600">Join a gardening club! We can connect you with local clubs and communities that share your passion for gardening.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>38. Planting Guides</h3>
+                    <p class="text-gray-600">If you need planting guides for specific plants, we can provide detailed information to help you succeed.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>39. Pest Control Advice</h3>
+                    <p class="text-gray-600">If you are dealing with pests in your garden, reach out for advice on effective pest control methods.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>40. Final Thoughts</h3>
+                    <p class="text-gray-600">We appreciate your interest in Plantrova Garden. Your inquiries and feedback help us grow and improve our services. We look forward to hearing from you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-6 bg-primary-dark text-white">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Plantrova Garden. All rights reserved.</p>
+            <p>Address: Metrotech Center, Brooklyn, NY 11201, USA</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>
