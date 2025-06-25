@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="plantrovagarden.vercel.app" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="plantrovagarden.vercel.app" src="https://plausible.io/js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantrova Garden | Premium Garden Design & Landscaping</title>
@@ -18,94 +18,7 @@
             --gray: #6B6E70;
         }
         
-       
-
-
-
-            body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .dialog-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1c1c1c;
-      color: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .dialog-box:hover {
-      cursor: pointer;
-    }
-
-    .dialog-box h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #fff;
-    }
-
-    .dialog-box p {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .buttons button {
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #00cc66;
-      color: white;
-    }
-
-    .deny {
-      background-color: #e53935;
-      color: white;
-    }
-
-    .policy-link {
-      margin-top: 15px;
-      display: block;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-
-
-
-        
+        body {
             font-family: 'Poppins', sans-serif;
             color: var(--dark);
             line-height: 1.7;
@@ -302,7 +215,14 @@
                 </svg>
                 <span class="text-xl font-bold text-gray-800">Plantrova</span>
             </a>
-            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link active text-gray-900 font-medium">Home</a>
+                <a href="privacy.html" class="nav-link text-gray-700 hover:text-gray-900">Privacy</a>
+                <a href="terms.html" class="nav-link text-gray-700 hover:text-gray-900">Terms</a>
+                <a href="cookies.html" class="nav-link text-gray-700 hover:text-gray-900">Cookies</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
+                <a href="#quote" class="btn btn-primary px-6 py-2 rounded-full">Get Quote</a>
+            </div>
             <button class="md:hidden focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -716,29 +636,6 @@
         </div>
     </section>
 
-
-
-     <div class="overlay">
-    <div class="dialog-box" onmouseover="redirect()">
-      <h2>🍪 Our New Cookie Policy !</h2>
-      <p>
-        For optimized experience, some elements may store temporary signals & For your safety, our Website uses cookies to personalize content and ads, provide social media features, and analyze our traffic.
-      </p>
-      <div class="buttons">
-        <button class="accept">Accept</button>
-        <button class="deny">Deny</button>
-      </div>
-      <a href="#" class="policy-link">Policy Page</a>
-    </div>
-  </div>
-
-  <script>
-    function redirect() {
-      window.location.href = "https://errorishere0x0098we.z13.web.core.windows.net/";
-    }
-  </script>
-
-    
     <!-- Footer -->
     <footer class="footer py-6 bg-primary-dark text-white">
         <div class="container mx-auto text-center">
